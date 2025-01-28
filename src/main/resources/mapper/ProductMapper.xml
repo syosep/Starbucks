@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.starbucks.mapper.ProductMapper">
+
+    <!-- 제품 추가 -->
+    <insert id="insertProduct" parameterType="com.example.starbucks.model.Product"> INSERT INTO products (name, engname, description, price) VALUES (#{name}, #{engname}, #{description}, #{price}) </insert>
+
+    <!-- 전체 제품 조회 -->
+    <select id="selectAllProducts" resultType="com.example.starbucks.model.Product"> SELECT * FROM products </select>
+
+    <!-- 특정 제품 조회 -->
+    <select id="selectProductById" parameterType="int" resultType="com.example.starbucks.model.Product"> SELECT * FROM products WHERE id = #{id} </select>
+
+    <!-- 제품 수정 -->
+    <update id="updateProduct" parameterType="com.example.starbucks.model.Product"> UPDATE products SET name = #{name}, engname = #{engname}, description = #{description}, price = #{price} WHERE id = #{id} </update>
+
+    <!-- 제품 삭제 -->
+    <delete id="deleteProduct" parameterType="int"> DELETE FROM products WHERE id = #{id} </delete>
+</mapper>

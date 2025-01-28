@@ -1,0 +1,79 @@
+/* 상품 상세 페이지 CSS */
+
+/* 상품 상세 페이지 전체 레이아웃 */
+.product-detail {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f6f5ef;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 상품 이미지 스타일 */
+.product-detail .product-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 상품 정보 섹션 */
+.product-detail .product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-detail .product-info h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-detail .product-info h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.product-detail .product-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* 버튼 스타일 */
+.product-detail .product-info button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #333;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.product-detail .product-info button:hover {
+    background-color: #f0f0f0;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .product-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-detail .product-info {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
